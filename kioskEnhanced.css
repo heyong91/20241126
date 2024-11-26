@@ -1,0 +1,167 @@
+/* 전체 레이아웃 */
+body {
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    background-image: url('https://i.pinimg.com/736x/49/dc/08/49dc0864b8aa1e2699ed4833e6defe20.jpg');
+    color: #ffffff;
+  }
+  
+  .kiosk-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px;
+  }
+  
+  header h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  header h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7em;
+    font-weight: 100;
+    margin-bottom: 80px;
+  }
+
+  
+  /* 메뉴 섹션 */
+  .menu-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  
+  .menu-item {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 180px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, rgb(66, 64, 64), rgba(255, 255, 255, 0.3) 30%);
+    border: solid 1px;
+    border-color: #c5c5c5;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 150, 0.5);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item p {
+    margin: 5px;
+    font-size: 0.8em;
+  }
+  
+  /* 장바구니 섹션 */
+  .cart-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgb(66, 64, 64), rgba(255, 255, 255, 0.3) 30%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    margin-bottom: 40px;
+  }
+  
+  .cart-section h2 {
+    text-align: center;
+    margin-bottom:5px;
+    font-size: 1.3em;
+  }
+  
+  #cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom:10px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item button {
+    background: rgba(255, 0, 150, 0.8);
+    color: rgb(248, 248, 248);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background: rgba(255, 0, 150, 1);
+  }
+  
+  /* 합계 및 버튼 */
+  .total {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    text-align: center;
+  }
+  
+  .action-button {
+    background: #ff0096;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background: #ff66b2;
+  }
+  
+  /* 팝업 */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .popup-content button {
+    background: #ff0096;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background: #ff66b2;
+  }
+  

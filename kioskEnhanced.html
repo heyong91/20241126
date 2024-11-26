@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiosk Enhanced</title>
+  <link rel="stylesheet" href="kioskEnhanced.css">
+</head>
+<body>
+  <div class="kiosk-container">
+    <header>
+      <h1>Welcome to heyongshop</h1>
+      <h2>We are an online poster store based in the UK. All of our posters are designed in house by a small team of artists. Our poster designs are bold and colourful and mainly inspired by the mid century era and it's these strong graphic elements that form the basis for many of our designs. We are regularly adding new collections to our shop so stay tuned for new arrivals and special offers by joining our mailing list at the bottom of the page.</h2>
+    </header>
+    <main>
+      <section id="menu" class="menu-section">
+        <div class="menu-item" data-name="Chaos Typography Print" data-price="3000">
+          <img src="https://luxeposterco.store/cdn/shop/files/BlackAndWhiteChaosPoster-1_1445x.jpg?v=1730834337" alt="Chaos Typography Print">
+          <p>Chaos Typography Print</p>
+          <p>₩ 3,000</p>
+        </div>
+        <div class="menu-item" data-name="Cowgirl Playing Card Print" data-price="5000">
+          <img src="https://luxeposterco.store/cdn/shop/files/RetroWesternWallArtPoster-13_4bafc1f3-4453-4132-b90c-2eafd183497c_1445x.jpg?v=1730833929" alt="Cowgirl Playing Card Print">
+          <p>Cowgirl Playing Card Print</p>
+          <p>₩ 5,000</p>
+        </div>
+        <div class="menu-item" data-name="Please Leave By 9pm" data-price="7000">
+          <img src="https://luxeposterco.store/cdn/shop/files/EclecticVintageWallArt_58adc099-4418-4948-97e6-b1d554a6cf57_1445x.jpg?v=1714328421" alt="Please Leave By 9pm">
+          <p>Please Leave By 9pm</p>
+          <p>₩ 7,000</p>
+        </div>
+        <div class="menu-item" data-name="Oui Oui Print - Black" data-price="7000">
+          <img src="https://luxeposterco.store/cdn/shop/files/BlackOuiOuiArtPrint.jpg?v=1722441353" alt="Oui Oui Print - Black">
+          <p>Oui Oui Print - Black</p>
+          <p>₩ 7,000</p>
+        </div>
+      </section>
+
+      <section id="cart" class="cart-section">
+        <h2>cart</h2>
+        <div id="cart-items"></div>
+        <p class="total">합계: <span id="total">₩ 0</span></p>
+        <div class="buttons">
+          <button id="reset" class="action-button">초기화</button>
+          <button id="order" class="action-button">주문하기</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <p>주문이 완료되었습니다!</p>
+        <button id="closePopup">닫기</button>
+      </div>
+    </div>
+  </div>
+  <script src="kioskEnhanced.js"></script>
+</body>
+</html>
