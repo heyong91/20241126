@@ -7,7 +7,7 @@ body {
   }
   
   .kiosk-container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 70px;
   }
@@ -33,13 +33,14 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
+    gap: 15px;
   }
   
   .menu-item {
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    width: 180px;
+    width: 150px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: linear-gradient(135deg, rgb(66, 64, 64), rgba(255, 255, 255, 0.3) 30%);
@@ -69,7 +70,7 @@ body {
   .cart-section {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     background: linear-gradient(135deg, rgb(66, 64, 64), rgba(255, 255, 255, 0.3) 30%);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(20px);
@@ -78,40 +79,59 @@ body {
   
   .cart-section h2 {
     text-align: center;
-    margin-bottom:5px;
+    margin-bottom:20px;
     font-size: 1.3em;
-  }
-  
-  #cart-items {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom:10px;
   }
   
   .cart-item {
     display: flex;
+    align-items: center; /* 아이템, 버튼, 수량 정렬 */
     justify-content: space-between;
-    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 아이템 간 구분선 */
   }
   
-  .cart-item button {
+  .cart-item .item-name {
+    flex: 2; /* 이름 넓이 고정 */
+    font-size: 0.9em;
+  }
+  
+  .cart-item .item-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 버튼과 수량 텍스트 간 간격 */
+  }
+  
+  .cart-item .item-controls button {
     background: rgba(255, 0, 150, 0.8);
-    color: rgb(248, 248, 248);
+    color: #fff;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 30px; /* 버튼 크기 고정 */
+    text-align: center;
+    font-size: 0.8em;
   }
   
-  .cart-item button:hover {
+  .cart-item .item-controls button:hover {
     background: rgba(255, 0, 150, 1);
   }
+  
+  .cart-item .item-count {
+    width: 30px; /* 수량 텍스트 크기 고정 */
+    text-align: center;
+    font-size: 0.9em;
+    color: #ff66b2;
+  }
+  
+  
   
   /* 합계 및 버튼 */
   .total {
     text-align: center;
     font-size: 1em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .buttons {
@@ -122,7 +142,7 @@ body {
     background: #ff0096;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -142,7 +162,7 @@ body {
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.9);
     color: black;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     display: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -156,9 +176,10 @@ body {
     background: #ff0096;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
   }
   
   .popup-content button:hover {

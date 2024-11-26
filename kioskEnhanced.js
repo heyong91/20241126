@@ -24,7 +24,7 @@ menu.addEventListener("click", (event) => {
 });
 
 function updateCart() {
-  cartDisplay.innerHTML = "";
+  cartDisplay.innerHTML = ""; // 장바구니 초기화
   let total = 0;
 
   for (const name in cart) {
@@ -33,10 +33,15 @@ function updateCart() {
 
     const item = document.createElement("div");
     item.classList.add("cart-item");
+
+    // 아이템 이름, 버튼, 수량 배치
     item.innerHTML = `
-      ${name} x${count} (${(price * count).toLocaleString()}원)
-      <button onclick="changeCount('${name}', 1)">+</button>
-      <button onclick="changeCount('${name}', -1)">-</button>
+      <span class="item-name">${name}</span>
+      <div class="item-controls">
+        <button onclick="changeCount('${name}', -1)">-</button>
+        <span class="item-count">${count}</span>
+        <button onclick="changeCount('${name}', 1)">+</button>
+      </div>
     `;
     cartDisplay.appendChild(item);
   }
@@ -44,7 +49,8 @@ function updateCart() {
   totalDisplay.textContent = `₩ ${total.toLocaleString()}`;
 }
 
-window.changeCount = (name, delta) => {
+// 수량 변경 함수
+function changeCount(name, delta) {
   if (cart[name]) {
     cart[name].count += delta;
     if (cart[name].count <= 0) delete cart[name];
