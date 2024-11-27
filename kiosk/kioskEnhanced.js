@@ -2,6 +2,8 @@
 const cart = {};
 // = : 오른쪽의 결과를 왼쪽에 넣어라(찾아온 결과를 박스에 담아라) // const : 데이터를 저장할 새로운 박스를 만들겠다 // const menu : 이 박스를 menu 라고 부를게 // 뭘 넣을지는 = 오른쪽에서 결정돼 // {} : 빈 상자
 
+//
+
 /* HTML의 특정 부분을 찾기 */
 const menu = document.querySelector("#menu");
 // document.querySelector("#menu") : HTML 안에서 id="menu"라는 이름을 가진 친구를 찾아와라 // querySelector()는 "찾는다"는 의미
